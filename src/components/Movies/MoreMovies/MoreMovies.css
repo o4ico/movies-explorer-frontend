@@ -1,0 +1,55 @@
+.more-movies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 70px;
+  margin: 0 auto;
+}
+
+.more-movies__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  text-align: center;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: #2F2F2F;
+  border-radius: 6px;
+  padding: 0;
+  margin: 50px 0;
+  border: none;
+  max-width: 320px;
+  height: 36px;
+  width: 100%;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  .more-movies {
+    padding: 0 40px;
+  }
+
+  .more-movies__button {
+    margin: 4px auto 30px;
+  }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 770px) {
+
+  .more-movies__button {
+    margin: 47px auto 80px;
+  }
+
+}
