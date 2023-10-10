@@ -23,7 +23,7 @@
 .profile__title {
   color: #FFF;
   text-align: center;
-  font-family: 'Inter';
+
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -43,7 +43,7 @@
 
 .profile__text-error {
   color: #EE3465;
-  font-family: 'Inter';
+
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -56,7 +56,7 @@
 .profile__submit-error {
   color: transparent;
   text-align: center;
-  font-family: 'Inter';
+
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
@@ -88,21 +88,23 @@
 .profile__input {
   color: #FFF;
   text-align: right;
-  font-family: 'Inter';
+
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   background-color: transparent;
-  max-width: 269px;
+  max-width: 215px;
   width: 100%;
   border: 0;
   margin: 0;
   padding: 0;
+  padding-bottom: 2px;
 }
 
 .profile__input:focus {
   outline: none;
+  border-bottom: 1px solid #2e2e2e;
 }
 
 .profile__input::placeholder {
@@ -155,7 +157,7 @@
 
 .profile__input-label {
   color: #FFF;
-  font-family: 'Inter';
+
   font-size: 11px;
   font-style: normal;
   font-weight: 500;
@@ -165,7 +167,7 @@
 .profile__submit-button {
   align-items: center;
   color: #fff;
-  font-family: 'Inter';
+
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -181,6 +183,11 @@
   margin-bottom: 0;
   height: 45px;
   border: none;
+}
+
+.profile__submit-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .profile__submit-button_edit {
@@ -237,10 +244,14 @@
 
   .profile {
     padding: 236px 30px 269px;
-    gap: 200px;
+    gap: 176px;
   }
 
   .profile__container {
     gap: 96px;
+  }
+
+  .profile__submit-button_edit {
+    margin-bottom: 14px;
   }
 }

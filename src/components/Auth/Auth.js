@@ -71,12 +71,12 @@ function Auth({
       </div>
       <div className="auth__submit-container">
         <input
-          className="auth__submit-button auth__submit-button_disabled"
+          className="auth__submit-button"
           type="submit"
           value='Зарегистрироваться'
         />
         <p className="auth__advice">{adviceText}
-          <Link className="auth__advice_link" to={adviceLink}>
+          <Link className="auth__advice-link" to={adviceLink}>
             {adviceTextLink}
           </Link>
         </p>

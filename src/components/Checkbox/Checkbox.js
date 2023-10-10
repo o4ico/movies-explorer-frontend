@@ -4,7 +4,7 @@ function Checkbox() {
 
   return (
     <div className="checkbox">
-      <label className="checkbox__container" for="checkbox">
+      <label className="checkbox__container" htmlFor="checkbox">
         <input className="checkbox__element" type='checkbox' id='checkbox' defaultChecked></input>
         <span className="checkbox__visible "></span>
       </label>

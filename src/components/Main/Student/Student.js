@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Student() {
   return (
     < Article
-      title='Студент'>
+      title='Студент' classContainer={'article_student'}>
 
       <section className="student">
         <h3 className="student__name">Виталий</h3>
@@ -17,7 +17,7 @@ function Student() {
           После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.
         </p>
         <img className="student__photo" src={studentPhoto} alt="фото для портфолио"></img>
-        <Link className="student__link" to="https://github.com/o4ico" >Github</Link>
+        <Link className="student__link" to="https://github.com/o4ico" target='_blank'>Github</Link>
       </section>
     </Article>
   );

@@ -22,7 +22,7 @@
 .auth__title {
   color: #FFF;
   text-align: start;
-  font-family: 'Inter';
+
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -42,7 +42,7 @@
 
 .auth__text-error {
   color: #EE3465;
-  font-family: 'Inter';
+
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -55,7 +55,7 @@
 .auth__submit-error {
   color: transparent;
   text-align: center;
-  font-family: 'Inter';
+
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
@@ -98,7 +98,7 @@
 .auth__input {
   color: #FFF;
   text-align: start;
-  font-family: 'Inter';
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -171,7 +171,7 @@
 
 .auth__input-label {
   color: #8B8B8B;
-  font-family: 'Inter';
+
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -182,7 +182,7 @@
 .auth__submit-button {
   align-items: center;
   color: #fff;
-  font-family: 'Inter';
+
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -198,6 +198,11 @@
   margin-bottom: 0;
   height: 45px;
   border: none;
+}
+
+.auth__submit-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .auth__submit-button_edit {
@@ -225,7 +230,7 @@
 .auth__advice {
   color: #8B8B8B;
   text-align: center;
-  font-family: 'Inter';
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -233,7 +238,7 @@
   margin: 0;
 }
 
-.auth__advice_link {
+.auth__advice-link {
   color: #4285F4;
   text-decoration: none;
 }

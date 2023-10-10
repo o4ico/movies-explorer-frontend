@@ -17,7 +17,7 @@
   align-items: center;
   color: #FFF;
   text-align: center;
-  font-family: 'Inter';
+
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -40,7 +40,16 @@
   }
 
   .more-movies__button {
-    margin: 50px auto 80px;
+    margin: 4px auto 30px;
+  }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 770px) {
+
+  .more-movies__button {
+    margin: 47px auto 80px;
   }
 
 }

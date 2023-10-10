@@ -11,7 +11,7 @@ function Account({
 
   /*const navigationAccountRoute = `${'account__link'} ${useLocation().pathname === "/profile" ? 'account__link_active' : ' '}`;*/
   return (
-    <Link className="account" to="/profile">
+    <Link className="account" to="/profile" style={{ textDecoration: 'none' }}>
       <p className='account__link'>Аккаунт</p>
 
       <div className={navigationAccountLogoColor} style={style} >

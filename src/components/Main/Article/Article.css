@@ -6,12 +6,20 @@
   max-width: 1280px;
   width: 100%;
   padding: 0 70px;
-  margin: 110px auto;
+  margin: 110px auto 95px;
+}
+
+.article_techs {
+  margin: 103px auto 100px;
+}
+
+.article_student {
+  margin: 110px auto 100px;
 }
 
 .article__title {
   color: #FFF;
-  font-family: 'Inter';
+
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -25,11 +33,15 @@
   margin: 0;
 }
 
+.article__title_techs {
+  border-bottom: 1px solid #000;
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
   .article {
     padding: 0 18px;
-    margin: 70px auto;
+    margin: 72px auto;
   }
 
   .article__title {
@@ -37,12 +49,29 @@
     letter-spacing: -0.72px;
     padding: 0 0 28px;
   }
+
+  .article_techs {
+    margin: 130px auto 140px;
+  }
+
+  .article_student {
+    padding: 0 14px;
+    margin: 80px auto 70px;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 770px) {
   .article {
     padding: 0 50px;
-    margin: 90px auto;
+    margin: 90px auto 76px;
+  }
+
+  .article_techs {
+    margin: 90px auto 90px;
+  }
+
+  .article_student {
+    margin: 90px auto 90px;
   }
 
 }

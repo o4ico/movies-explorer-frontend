@@ -67,7 +67,7 @@ function Profile({
                 type="submit"
                 value='Редактировать'
               />
-              <Link to="/sign-in"><button className="profile__submit-button profile__submit-button_exit">Выйти из аккаунта</button></Link>
+              <Link to="/"><button className="profile__submit-button profile__submit-button_exit">Выйти из аккаунта</button></Link>
             </div>)
           }
         </section>

@@ -6,7 +6,7 @@ function MoreMovies() {
 
   return (
     <section className="more-movies">
-      <button className="more-movies__button">Ещё</button>
+      <button className="more-movies__button" type="button">Ещё</button>
     </section>
   );
 }

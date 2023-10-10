@@ -19,7 +19,7 @@
 
 .about-project__subtitle {
   color: #FFF;
-  font-family: 'Inter';
+
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -33,7 +33,7 @@
 
 .about-project__text {
   color: #FFF;
-  font-family: 'Inter';
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -59,7 +59,7 @@
   display: grid;
   color: #FFF;
   text-align: center;
-  font-family: 'Inter';
+
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -87,7 +87,7 @@
   display: grid;
   color: #8B8B8B;
   text-align: center;
-  font-family: 'Inter';
+
   font-size: 14px;
   font-style: normal;
   font-weight: 500;

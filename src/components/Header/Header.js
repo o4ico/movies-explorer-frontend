@@ -36,8 +36,15 @@ function Header({
     <header className="header">
       < Logo />
       {children}
-      {isBurgerMenu ? (
-        <button className='header__menu' onClick={handleNavigateButtonClick}></button>
+
+      {isLoggiedIn ? (
+        <>
+          {isBurgerMenu ? (
+            <button className='header__menu' onClick={handleNavigateButtonClick}></button>
+          ) : (
+            <Navigation isLoggiedIn={isLoggiedIn} />
+          )}
+        </>
       ) : (
         <Navigation isLoggiedIn={isLoggiedIn} />
       )}

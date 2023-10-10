@@ -15,7 +15,7 @@
 .promo__title {
   box-sizing: border-box;
   align-self: flex-start;
-  font-family: 'Inter';
+
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -50,7 +50,7 @@
   .promo__title {
     align-self: center;
     text-align: center;
-    font-family: 'Inter';
+
     font-size: 31px;
     font-style: normal;
     font-weight: 400;

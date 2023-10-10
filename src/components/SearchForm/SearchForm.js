@@ -78,7 +78,7 @@ function SearchForm() {
           < Checkbox />
         </div>
       )}
-      <div div className="search-form__line"></div>
+      <div className="search-form__line"></div>
     </section>
   );
 }

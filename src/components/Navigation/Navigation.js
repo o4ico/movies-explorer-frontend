@@ -13,18 +13,18 @@ function Navigation({
   return (
     <>
       {isLoggiedIn ? (
-        <div className="navigation__container">
+        <nav className="navigation">
           <nav className="navigation__links">
             <Link className={navigationMoviesRoute} to="/movies" >Фильмы</Link>
             <Link className={navigationSavedMoviesRoute} to="/saved-movies" >Сохранённые фильмы</Link>
           </nav>
           < Account />
-        </div>
+        </nav>
       ) : (
-        <div className="navigation__container navigation__container_unauthorized">
-          <Link to="/signup"><button className="navigation__button">Регистрация</button></Link>
-          <Link to="/signin"><button className="navigation__button navigation__button_login">Войти</button></Link>
-        </div>
+        <nav className="navigation navigation_unauthorized">
+          <Link to="/signup" style={{ textDecoration: 'none' }}><button className="navigation__button">Регистрация</button></Link>
+          <Link to="/signin" style={{ textDecoration: 'none' }}><button className="navigation__button navigation__button_login">Войти</button></Link>
+        </nav>
       )
       }
     </>

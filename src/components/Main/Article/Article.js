@@ -2,11 +2,15 @@ import React from 'react';
 import './Article.css';
 function Article({
   title,
-  children
+  children,
+  classContainer,
+  classTitle
 }) {
+
+
   return (
-    <article className="article">
-      <h3 className="article__title">{title}</h3>
+    <article className={`article ${classContainer ? `${classContainer}` : ''}`}>
+      <h2 className={`article__title ${classTitle}`}>{title}</h2>
       {children}
     </article>
   );
