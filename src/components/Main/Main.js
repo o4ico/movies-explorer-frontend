@@ -9,32 +9,23 @@ import Techs from './Techs/Techs';
 import Student from './Student/Student';
 import Portfolio from './Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
+import usePageWidth from '../../utils/pageWidth';
 
 function Main({
   isLoggiedIn,
   handleNavigateButtonClick
 }) {
 
-  const [pageWidth, setPageWidth] = useState([]);
   const [isMinWidth, setIsMinWidth] = useState(false);
+  let width = usePageWidth();
 
   useLayoutEffect(() => {
-    function updateSize() {
-      setPageWidth([window.innerWidth]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-
-  useLayoutEffect(() => {
-    if (pageWidth <= 480) {
+    if (width <= 480) {
       setIsMinWidth(true);
     } else {
       setIsMinWidth(false);
     }
-  }, [pageWidth]);
+  }, [width]);
 
   return (
     <>

@@ -53,8 +53,8 @@
   padding-top: 5px;
 }
 
-.profile__submit-error {
-  color: transparent;
+.profile__submit-massage {
+  color: #2BE080;
   text-align: center;
 
   font-size: 11px;
@@ -64,7 +64,7 @@
   margin-bottom: 30px;
 }
 
-.profile__submit-error_visible {
+.profile__submit-massage_error {
   color: #EE3465;
 }
 
@@ -82,7 +82,10 @@
 .profile__submit-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   box-sizing: border-box;
+  max-width: 410px;
+  width: 100%;
 }
 
 .profile__input {
@@ -107,9 +110,15 @@
   border-bottom: 1px solid #2e2e2e;
 }
 
+.profile__input:disabled {
+  outline: none;
+  border-bottom: none;
+  cursor: default;
+}
+
 .profile__input::placeholder {
   font-family: inherit;
-  color: #FFF;
+  color: #8B8B8B;
   font-weight: 400;
   font-size: 11px;
   line-height: normal;
@@ -117,7 +126,7 @@
 
 .profile__input::-webkit-input-placeholder {
   font-family: inherit;
-  color: #FFF;
+  color: #8B8B8B;
   font-weight: 400;
   font-size: 11px;
   line-height: normal;
@@ -125,7 +134,7 @@
 
 .profile__input:-moz-placeholder {
   font-family: inherit;
-  color: #FFF;
+  color: #8B8B8B;
   font-weight: 400;
   font-size: 11px;
   line-height: normal;
@@ -133,7 +142,7 @@
 
 .profile__input::-moz-placeholder {
   font-family: inherit;
-  color: #FFF;
+  color: #8B8B8B;
   font-weight: 400;
   font-size: 11px;
   line-height: normal;
@@ -141,7 +150,7 @@
 
 .profile__input:-ms-input-placeholder {
   font-family: inherit;
-  color: #FFF;
+  color: #8B8B8B;
   font-weight: 400;
   font-size: 11px;
   line-height: normal;
@@ -149,7 +158,7 @@
 
 .profile__input::-ms-input-placeholder {
   font-family: inherit;
-  color: #FFF;
+  color: #8B8B8B;
   font-weight: 400;
   font-size: 11px;
   line-height: normal;

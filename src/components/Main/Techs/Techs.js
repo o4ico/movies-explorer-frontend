@@ -1,31 +1,21 @@
 import React from 'react';
 import { useLayoutEffect, useState } from 'react';
-
+import usePageWidth from '../../../utils/pageWidth';
 import './Techs.css';
 import Article from '../Article/Article';
 
 function Techs() {
 
-  const [pageWidth, setPageWidth] = useState([]);
   const [isMinWidth, setIsMinWidth] = useState(false);
+  let width = usePageWidth();
 
   useLayoutEffect(() => {
-    function updateSize() {
-      setPageWidth([window.innerWidth]);
-    }
-
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-
-  useLayoutEffect(() => {
-    if (pageWidth <= 480) {
+    if (width <= 480) {
       setIsMinWidth(true);
     } else {
       setIsMinWidth(false);
     }
-  }, [pageWidth]);
+  }, [width]);
 
   const articleTitleBorderButtom = `${isMinWidth ? 'article__title_techs' : ' '}`;
 

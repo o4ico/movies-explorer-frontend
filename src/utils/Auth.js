@@ -13,55 +13,39 @@ class Auth {
     return Promise.reject(`Ошибка: ой ${res.status}`);
   }
 
-  register(email, password) {
+  register(name, email, password) {
     return fetch(`${this._url}/signup`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        name: name,
         email: email,
-        password: password
-      })
-    }
-    )
-      .then((res) => {
-        return this._checkResponse(res);
-      })
+        password: password,
+      }),
+    }).then((res) => {
+      return this._checkResponse(res);
+    })
   }
 
   authorize(email, password) {
-    const url = `${this._url}/signin`;
-    return fetch(url, {
+    return fetch(`${this._url}/signin`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        email: email,
-        password: password
+        email, password
       })
     }
     )
-      .then(res => {
-        return this._checkResponse(res);
-      });
-  }
-
-  getContent() {
-    return fetch(`${this._url}/users/me`, {
-      method: 'GET',
-      headers: {
-        Authorization: getToken(),
-        'Content-Type': 'application/json'
-      }
-    })
       .then(res => {
         return this._checkResponse(res);
       });
   }
 }
 //const auth = new Auth('http://127.0.0.1:4000');
-const auth = new Auth('https://api.mesto.o4ico.nomoredomainsicu.ru');
+const auth = new Auth('https://api.film.nomoredomainsrocks.ru');
 
 export default auth;

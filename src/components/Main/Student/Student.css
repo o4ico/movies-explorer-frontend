@@ -55,7 +55,7 @@
 .student__photo {
   grid-row: 1/5;
   grid-column: 2/3;
-  align-self: flex-end;
+  align-self: center;
   box-sizing: border-box;
   object-fit: cover;
   max-width: 270px;

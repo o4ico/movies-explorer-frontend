@@ -1,79 +1,98 @@
 import React from 'react';
 import './Auth.css'
 import Logo from '../Logo/Logo'
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useFormWithValidation } from '../../utils/validation';
+import auth from '../../utils/Auth';
 
 function Auth({
   formName,
   title,
+  submitButtonText,
   adviceText,
   adviceLink,
-  adviceTextLink
+  adviceTextLink,
+  onSubmit
 }) {
-
+  const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
   const isRegisterRoute = useLocation().pathname === "/signup";
+
+  function handleSubmit(evt) {
+    evt.preventDefault();
+    if (isRegisterRoute) {
+      onSubmit(values.name, values.email, values.password);
+    } else {
+      onSubmit(values.email, values.password);
+    }
+  }
 
   return (
     <section className="auth">
       <div className="auth__container">
         < Logo />
         <h1 className="auth__title">{title}</h1>
-        <form className="auth__form" name={formName} noValidate="">
-          <label className="auth__input-container">
-            <span className="auth__input-label">Имя</span>
-            <input
-              className="auth__input"
-              type="text"
-              placeholder='Имя'
-              name="name"
-              id="auth-name"
-              required
-              minLength={2}
-              maxLength={100}
-            />
-          </label>
-          <span className="auth__text-error auth-name-text-error" ></span>
-          <label className="auth__input-container">
-            <span className="auth__input-label">E-mail</span>
-            <input
-              className="auth__input"
-              type="text"
-              placeholder='E-mail'
-              name="email"
-              id="auth-email"
-              required
-              minLength={2}
-              maxLength={100}
-            />
-          </label>
-          <span className="auth__text-error auth-email-text-error" ></span>
+        <form className="auth__form" id={formName} name={formName} onSubmit={handleSubmit}>
           {isRegisterRoute ? (
             <>
               <label className="auth__input-container">
-                <span className="auth__input-label">Пароль</span>
+                <span className="auth__input-label">Имя</span>
                 <input
-                  className="auth__input auth__input_error"
-                  type="password"
-                  placeholder='Пароль'
-                  name="email"
-                  id="auth-password"
+                  className={`auth__input ${errors.name ? 'auth__input_error' : ''} `}
+                  type="text"
+                  placeholder='Имя'
+                  name="name"
+                  id="auth-name"
+                  value={values.name || ''}
+                  onChange={handleChange}
                   required
                   minLength={2}
-                  maxLength={100}
+                  maxLength={30}
                 />
               </label>
-              <span className="auth__text-error auth-password-text-error" >Что-то пошло не так...</span>
+              <span className={`auth__text-error ${errors.name ? 'auth__text-error' : ''}`}>{errors.name}</span>
             </>
           ) : (
             <></>
           )}
+          <label className="auth__input-container">
+            <span className="auth__input-label">E-mail</span>
+            <input
+              className={`auth__input ${errors.email ? 'auth__input_error' : ''} `}
+              type="email"
+              placeholder='E-mail'
+              name="email"
+              id="auth-email"
+              value={values.email || ''}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <span className={`auth__text-error ${errors.email ? 'auth__text-error' : ''}`}>{errors.email}</span>
+          <label className="auth__input-container">
+            <span className="auth__input-label">Пароль</span>
+            <input
+              className={`auth__input ${errors.password ? 'auth__input_error' : ''} `}
+              type="password"
+              placeholder='Пароль'
+              name="password"
+              id="auth-password"
+              value={values.password || ''}
+              onChange={handleChange}
+              required
+              minLength={8}
+            />
+          </label>
+          <span className={`auth__text-error ${errors.password ? 'auth__text-error' : ''}`}>{errors.password}</span>
+
         </form>
       </div>
       <div className="auth__submit-container">
         <input
-          className="auth__submit-button"
+          className={`auth__submit-button ${!isValid ? 'auth__submit-button_disabled' : ''}`}
           type="submit"
-          value='Зарегистрироваться'
+          value={submitButtonText}
+          disabled={!isValid}
+          form={formName}
         />
         <p className="auth__advice">{adviceText}
           <Link className="auth__advice-link" to={adviceLink}>
