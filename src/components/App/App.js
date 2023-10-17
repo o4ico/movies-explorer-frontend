@@ -14,7 +14,6 @@ import Register from "../Register/Register";
 import Login from "../Login/Login";
 import NotFound from "../NotFound/NotFound";
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
-import auth from "../../utils/Auth";
 import mainApi from "../../utils/MainApi";
 
 function App() {
@@ -92,15 +91,10 @@ function App() {
   };
 
   const handleDeleteMovie = (movieId) => {
-    //const searchingResults = JSON.parse(localStorage.getItem('searchingResults'));
 
     mainApi.deleteMovieServer(movieId)
       .then(() => {
         setSavedMovies((state) => state.filter((item) => item._id !== movieId));
-        /*if (searchingResults) {
-          const newSearchingResults = searchingResults.filter((item) => item._id !== movieId);
-          localStorage.setItem('searchingResults', JSON.stringify(newSearchingResults));
-        }*/
       })
       .catch(err => console.log(err));
   };
